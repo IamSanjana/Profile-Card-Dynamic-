@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale:1.0">
+        <title>
+          Profile Card Design
+        </title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> 
+
+        <style type="text/css">
+
+            body{ background-color: rgb(163, 0, 0);
+                background-image:url(tsbg.jpg);
+                background-repeat:no-repeat;
+                background-position-x: -200px;
+                               
+              
+            }
+            
+            .box{font-family: 'Kumbh Sans', sans-serif;
+                border-radius: 15px;
+                width:370px;
+                height:400px;
+                margin:auto;
+                margin-top: 100px;
+                text-align: center;
+                background-color:white;
+            }
+
+            .box img{
+                border-radius: 15px 15px 0 0;
+            }
+
+            .dp img{border-radius: 50%; 
+                    border: solid white 5px;
+                    margin-top: -50px;
+                    height:30%;
+                    width: 30%;
+            }
+
+            .stat{display: inline-flex;
+                  width: 370px;
+                  justify-content: space-evenly;
+                  border-top: ridge 2px hsl(0, 0%, 79%);;
+                  margin-top: 30px;
+            }
+             
+            .name{display: inline-flex;
+                  flex-wrap: nowrap;
+                  align-content: space-around;
+                  }
+
+            .heading {font-weight: 700;
+                     padding:15px 0px 8px 60px;
+                     font-size: 18px;
+                     color: hsl(229, 23%, 23%);
+                     
+            }
+
+            .name img {height:fit-content;
+                          width: 35px;
+                          padding:14px 40px 0px 0px;
+                        
+                        }
+
+            #F {font-size: 13px;
+                padding-top: 10px;
+                display: block;
+                }            
+                         
+            .mark { font-weight: 800;
+                     padding:12px 20px 7px 20px;
+                     font-size: 16px;
+                     color: hsl(0, 2%, 10%);
+                     align-content: center;
+
+            }
+            
+            .sub {font-weight: 600;
+                  font-size: 14px;
+                  color: hsl(0, 4%, 22%);
+                 padding-left: 3px;
+                 align-content: center;
+            }    
+
+            .place {font-size: 14px; font-weight: 700;}
+
+            .button { margin-top: 3%;
+                      margin-left: 47%;
+                      
+            }
+
+            #follow { font-size: medium;
+                font-weight: 800;
+                height: 45px;
+                width: 100px;
+                
+            }
+
+            #unfollow {
+                font-size: medium;
+                font-weight: 800;
+                height: 45px;
+                width: 100px;
+                margin-top: 50px;
+                display: none;
+            }
+
+            @media  screen and (max-width: 599px) {
+
+                .button {margin-left: 40%;
+                         margin-top: 10%;}
+                
+            }
+             
+            
+
+        </style>
+    </head>
+
+    <body>
+        
+      
+       <div class="box">
+       <img class="bg" src="cardbg1.jpg" width="370px" height="130px">  
+        <div class="dp"><img src="TS.jpg"></div>
+    
+        <div class="tag">
+            <div class="name">
+               <div class="heading">Taylor Swift</div>
+               <img src="bluetick.png"> 
+            </div>
+               <div class="place">Nashville</div>
+               <div id= "F"> </div>
+        </div>
+        
+       
+        <div class="stat">
+            <div>
+                <div class="mark">196M</div>
+                <div class="sub">Followers</div> 
+            </div>
+            <div>
+                <div class="mark">0</div>
+                <div class="sub">Following</div> 
+            </div>    
+            <div>
+                <div class="mark">572</div>
+                <div class="sub">Posts</div> 
+            </div>       
+        </div>
+        
+       
+    </div>
+
+    
+        <button class= "button" id= "follow" >Follow</button>
+        <button class= "button" id= "unfollow" >Unfollow</button>
+    
+
+    <script type="text/javascript">
+
+        document.getElementById("follow").onclick = function (){
+         document.getElementById("F").innerHTML= "Following";
+         document.getElementById("follow").style.display = "none"; 
+         document.getElementById("unfollow").style.display = "block"; 
+     }
+
+       document.getElementById("unfollow").onclick = function (){
+         document.getElementById("F").innerHTML= " ";
+         document.getElementById("follow").style.display = "block"; 
+         document.getElementById("unfollow").style.display = "none"; 
+     }
+
+    </script>
+
+
+    </body>
+</html>
